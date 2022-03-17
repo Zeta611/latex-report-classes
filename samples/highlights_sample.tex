@@ -1,0 +1,53 @@
+%! TEX program = xelatex
+\documentclass{highlights}
+
+\usepackage{lipsum}
+
+\title{Highlights of \textit{Fundamentals of Microelectronics}}
+\author{Jaeho Lee}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Introduction to Microelectronics}
+\begin{concept}{Voltage Gain}
+  \emph{Voltage gain $A_v$} in a voltage amplifier:
+  \begin{equation}
+    A_v = \frac{v_\mathrm{out}}{v_\mathrm{in}}.
+  \end{equation}
+  Expressed in decibels (dB):
+  \begin{equation}
+    A_v|_{\mathrm{dB}} = 20 \log \frac{v_\mathrm{out}}{v_\mathrm{in}}.
+  \end{equation}
+\end{concept}
+
+\begin{concept}{Kirchoff's Laws}
+  \emph{The Kirchoff Current Law (KCL).} The sum of all currents flowing \emph{into} a node is zero:
+  \begin{equation}
+    \sum_j I_j = 0.
+  \end{equation}
+  \tcbline
+  \emph{The Kirchoff Voltage Law (KVL).} The sum of voltage drops around any closed loop in a circuit is zero:
+  \begin{equation}
+    \sum_j V_j = 0.
+  \end{equation}
+\end{concept}
+
+\begin{concept}{Thevenin and Norton Equivalents}
+  \emph{Thevenin's theorem.} A linear one-port network can be replaced with a voltage source in series with an impedance.
+  The \emph{equivalent voltage $v_\mathrm{Thev}$} can be calculated by leaving the port open;
+  The \emph{equivalent impedance $Z_\mathrm{Thev}$} can be determined by setting all independent voltage and current sources to zero.
+  \tcbline
+  \emph{Norton's theorem.} A linear one-port network can be replaced with a current source in parallel with an impedance.
+  The \emph{equivalent current $i_\mathrm{Nor}$} can be obtained by shorting the port;
+  The \emph{equivalent impedance $Z_\mathrm{Nor}$} can be determined by setting all independent voltage and current sources to zero.
+  \tcbline
+  Note that $Z_\mathrm{Thev} = Z_\mathrm{Nor}$.
+\end{concept}
+
+\section{Basic Physics of Semiconductors}
+\begin{concept}{Lorem Ipsum}
+  \lipsum[1]
+\end{concept}
+\end{document}
