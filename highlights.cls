@@ -5,6 +5,12 @@
   {0.1}
   {Summarize key concepts}
 
+\RequirePackage{l3keys2e}
+\keys_define:nn { highlights } {
+  testmode .bool_set:N = \l_highlights_testmode_bool,
+}
+\ProcessKeysOptions { highlights }
+
 \LoadClass[a4paper]{article}
 
 %%% Math settings
@@ -21,6 +27,8 @@
 %% Custom packages
 \RequirePackage{xcolor}
 \definecolor{niceorange}{HTML}{F8A092}
+\colorlet{niceorangeback}{niceorange!12}
+\colorlet{memorizecolor}{black}
 
 \RequirePackage[skins]{tcolorbox}
 \tcbuselibrary{xparse, breakable}
@@ -29,6 +37,16 @@
     enhanced~jigsaw,
     breakable,
     colframe = niceorange,
-    colback = niceorange!12,
+    colback = niceorangeback,
     title = #1
   }
+
+\NewDocumentCommand { \memorize } { m }
+  {
+    \textcolor{memorizecolor}{#1}
+  }
+
+\AtBeginDocument{
+  \bool_if:NT \l_highlights_testmode_bool
+    { \colorlet{memorizecolor}{niceorangeback} }
+}

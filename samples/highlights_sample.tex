@@ -1,7 +1,8 @@
 %! TEX program = xelatex
-\documentclass{highlights}
+\documentclass[testmode]{highlights}
 
-\usepackage{lipsum}
+\usepackage{siunitx}
+\sisetup{per-mode=symbol}
 
 \title{Highlights of \textit{Fundamentals of Microelectronics}}
 \author{Jaeho Lee}
@@ -14,40 +15,50 @@
 \begin{concept}{Voltage Gain}
   \emph{Voltage gain $A_v$} in a voltage amplifier:
   \begin{equation}
-    A_v = \frac{v_\mathrm{out}}{v_\mathrm{in}}.
+    A_v = \memorize{\frac{v_\mathrm{out}}{v_\mathrm{in}}}.
   \end{equation}
   Expressed in decibels (dB):
   \begin{equation}
-    A_v|_{\mathrm{dB}} = 20 \log \frac{v_\mathrm{out}}{v_\mathrm{in}}.
+    A_v|_{\mathrm{dB}} = \memorize{20 \log \frac{v_\mathrm{out}}{v_\mathrm{in}}}.
   \end{equation}
 \end{concept}
 
 \begin{concept}{Kirchoff's Laws}
-  \emph{The Kirchoff Current Law (KCL).} The sum of all currents flowing \emph{into} a node is zero:
+  \emph{The Kirchoff Current Law (KCL).} \memorize{The sum of all currents flowing \emph{into} a node is zero:
   \begin{equation}
     \sum_j I_j = 0.
-  \end{equation}
+  \end{equation}}
   \tcbline
-  \emph{The Kirchoff Voltage Law (KVL).} The sum of voltage drops around any closed loop in a circuit is zero:
+  \emph{The Kirchoff Voltage Law (KVL).} \memorize{The sum of voltage drops around any closed loop in a circuit is zero:
   \begin{equation}
     \sum_j V_j = 0.
-  \end{equation}
+  \end{equation}}
 \end{concept}
 
 \begin{concept}{Thevenin and Norton Equivalents}
-  \emph{Thevenin's theorem.} A linear one-port network can be replaced with a voltage source in series with an impedance.
-  The \emph{equivalent voltage $v_\mathrm{Thev}$} can be calculated by leaving the port open;
-  The \emph{equivalent impedance $Z_\mathrm{Thev}$} can be determined by setting all independent voltage and current sources to zero.
+  \emph{Thevenin's theorem.} A linear one-port network can be replaced with \memorize{a voltage source in series with an impedance}.
+  The \emph{equivalent voltage $v_\mathrm{Thev}$} can be calculated by \memorize{leaving the port open};
+  The \emph{equivalent impedance $Z_\mathrm{Thev}$} can be determined by \memorize{setting all independent voltage and current sources to zero}.
   \tcbline
-  \emph{Norton's theorem.} A linear one-port network can be replaced with a current source in parallel with an impedance.
-  The \emph{equivalent current $i_\mathrm{Nor}$} can be obtained by shorting the port;
-  The \emph{equivalent impedance $Z_\mathrm{Nor}$} can be determined by setting all independent voltage and current sources to zero.
+  \emph{Norton's theorem.} A linear one-port network can be replaced with \memorize{a current source in parallel with an impedance}.
+  The \emph{equivalent current $i_\mathrm{Nor}$} can be obtained by \memorize{shorting the port};
+  The \emph{equivalent impedance $Z_\mathrm{Nor}$} can be determined by \memorize{setting all independent voltage and current sources to zero}.
   \tcbline
   Note that $Z_\mathrm{Thev} = Z_\mathrm{Nor}$.
 \end{concept}
 
 \section{Basic Physics of Semiconductors}
-\begin{concept}{Lorem Ipsum}
-  \lipsum[1]
+\begin{concept}{Bandgap Energy}
+  The \emph{bandgap energy $E_g$} is \memorize{the minimum energy to dislodge an electron from a covalent bond}.
+  This is a fundamental property of the material, e.g., for silicon $E_g = \memorize{\qty{1.12}{\eV}}$.
+  ($\qty{1}{\eV} = \qty{1.6e-19}{\J}$)
+\end{concept}
+
+\begin{concept}{Electron Density (Charge Carrier Density)}
+  The \emph{density of electrons $n_i$}, i.e., the number of electrons per unit volumn is
+  \begin{equation}
+    n_i = \memorize{\num{5.2e15} T^{\frac{3}{2}} \exp \frac{-E_g}{2kT} \unit[per-mode=power]{\per\cubic\cm}}.
+  \end{equation}
+  where $k = \qty{1.39e-23}{\J\per\K}$ is the Boltzmann constant.
 \end{concept}
 \end{document}
