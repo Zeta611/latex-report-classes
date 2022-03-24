@@ -5,7 +5,7 @@
   {0.1}
   {My custom physics report class}
 
-\LoadClass[korean, twocolumn]{myreport}
+\LoadClass[korean, twocolumn, 10pt]{myreport}
 
 \newcommand*{\department}[1]{
   \newcommand*{\thedepartment}{#1}
@@ -60,3 +60,12 @@
   \begin{center}
     \LARGE
 }
+
+\RequirePackage{tabularray}
+\UseTblrLibrary{booktabs}
+
+\RequirePackage[font=small]{caption}
+
+\RequirePackage{tikz}
+
+\RequirePackage{siunitx}

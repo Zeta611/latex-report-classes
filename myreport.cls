@@ -9,12 +9,14 @@
 \keys_define:nn { module } {
   korean  .bool_set:N = \l_myreport_korean_bool,
   twocolumn .bool_set:N = \l_myreport_twocolumn_bool,
+  10pt .bool_set:N = \l_myreport_tenpt_bool,
 }
 \ProcessKeysOptions { module }
 
 \LoadClass [ a4paper, microtype
   \bool_if:NF \l_myreport_korean_bool { ,nokorean }
   \bool_if:NT \l_myreport_twocolumn_bool { ,twocolumn }
+  \bool_if:NT \l_myreport_tenpt_bool { ,10pt }
 ] { oblivoir }
 \OnehalfSpacing
 
