@@ -45,16 +45,38 @@
 \newunicodechar{⩴}{\textfallback{⩴}}
 
 %% Font settings
-\setmainfont{Libertinus~Serif}[Scale=1.13]
-\setsansfont{Libertinus~Sans}[Scale=1.13]
-\setmonofont{Inconsolata}[Scale=1.13]
+\bool_if:NTF \l_myreport_korean_bool
+  {
+    \setmainfont{Libertinus~Serif}[Scale=1.13]
+    \setsansfont{Libertinus~Sans}[Scale=MatchUppercase]
+    \setmonofont{Inconsolata}[Scale=MatchLowercase]
 
-\setmathfont{Libertinus~Math}[Scale=1.13] % Before set*hangulfont
+    \setmathfont{Libertinus~Math}[Scale=MatchUppercase] % Before set*hangulfont
 
-\setmainhangulfont{Noto~Serif~CJK~KR}
-\setsanshangulfont[BoldFont={*~Bold}]{KoPubWorldDotum_Pro}
-\setmonohangulfont{D2Coding}
+    \setmainhangulfont{Noto~Serif~CJK~KR}
+    \setsanshangulfont[BoldFont={*~Bold}]{KoPubWorldDotum_Pro}
+    \setmonohangulfont{D2Coding}[Scale=MatchLowercase]
+  }
+  {
+    \setmainfont{Libertinus~Serif}
+    \setsansfont{Libertinus~Sans}[Scale=MatchUppercase]
+    \setmonofont{Inconsolata}[Scale=MatchLowercase]
+
+    \setmathfont{Libertinus~Math}[Scale=MatchUppercase] % Before set*hangulfont
+
+    \setmainhangulfont{Noto~Serif~CJK~KR}[Scale=.885]
+    \setsanshangulfont[BoldFont={*~Bold}]{KoPubWorldDotum_Pro}[Scale=.885]
+    \setmonohangulfont{D2Coding}[Scale=MatchLowercase]
+  }
 
 %% Custom packages
-\usepackage{tabularray}
-\usepackage{hyperref}
+\RequirePackage[per-mode=symbol]{siunitx}
+\RequirePackage{tikz}
+
+\RequirePackage{tabularray}
+\UseTblrLibrary{booktabs}
+\UseTblrLibrary{siunitx}
+
+\RequirePackage{hyperref}
+
+\RequirePackage[font=small]{caption}

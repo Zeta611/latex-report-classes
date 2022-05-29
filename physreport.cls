@@ -60,12 +60,3 @@
   \begin{center}
     \LARGE
 }
-
-\RequirePackage{tabularray}
-\UseTblrLibrary{booktabs}
-
-\RequirePackage[font=small]{caption}
-
-\RequirePackage{tikz}
-
-\RequirePackage{siunitx}
