@@ -52,6 +52,7 @@
     \setmonofont{Inconsolata}[Scale=MatchLowercase]
 
     \setmathfont{Libertinus~Math}[Scale=MatchUppercase] % Before set*hangulfont
+    \setmathfont{TeX~Gyre~Pagella~Math}[range={\lbrace,\rbrace},Scale=MatchUppercase]
 
     \setmainhangulfont{Noto~Serif~CJK~KR}
     \setsanshangulfont[BoldFont={*~Bold}]{KoPubWorldDotum_Pro}
@@ -63,6 +64,7 @@
     \setmonofont{Inconsolata}[Scale=MatchLowercase]
 
     \setmathfont{Libertinus~Math}[Scale=MatchUppercase] % Before set*hangulfont
+    \setmathfont{TeX~Gyre~Pagella~Math}[range={\lbrace,\rbrace},Scale=MatchUppercase]
 
     \setmainhangulfont{Noto~Serif~CJK~KR}[Scale=.885]
     \setsanshangulfont[BoldFont={*~Bold}]{KoPubWorldDotum_Pro}[Scale=.885]
