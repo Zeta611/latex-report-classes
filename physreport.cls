@@ -54,7 +54,6 @@
 
 \setlength{\absleftindent}{0pt}
 \setlength{\absrightindent}{0pt}
-\abslabeldelim{dafsdf}
 
 \pretitle{
   \begin{center}
